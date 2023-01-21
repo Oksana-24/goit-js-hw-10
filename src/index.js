@@ -45,14 +45,19 @@ function createMarkup(data) {
             flags: { svg },
             capital,
             population,
-            languages }) =>  `<li>
-        <h2>${nameCountry}</h2>
-        <img src="${svg}" alt="${nameCountry} width ="300" />
+            languages }) => {
+            const language = Object.values(languages);
+            console.log(language)
+            return `<li>
+        <div class="country-box">
+        <img class="country-img" src="${svg}" alt="${nameCountry} width="150" height="150" />
+        <h2 class="country-box__title unique">${nameCountry}</h2>
+        </div>
         <h2>Capital: ${capital}</h2>
         <p>Population: ${population}</p>
-        <p>Languages: ${languages}</p>
+        <p>Languages: ${language}</p>
         </li>`
-            ).join('');
+        } ).join('');
 
 
         countryList.innerHTML = markup;
@@ -61,9 +66,11 @@ function createMarkup(data) {
         const markup = data.map(({
             name: { official: nameCountry },
             flags: { svg } }) =>
-            `<h2>Country: ${nameCountry}</h2>
-            <img src="${svg}" alt="${nameCountry}" width ="200">`).join('');
-        
+            `<div class="country-box">
+            <img class="country-box__img"src="${svg}" alt="${nameCountry}" width ="150"  >
+            <h2 class="country-box__title"> ${nameCountry}</h2>
+            </div>`).join('');
+
         countryList.innerHTML = markup;
     }
 }
