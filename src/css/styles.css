@@ -26,7 +26,7 @@ background: rgb(230, 245, 139);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-left: 10px;
+  padding-left: 0;
 }
 
 .country-box {
