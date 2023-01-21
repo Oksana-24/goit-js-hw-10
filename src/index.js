@@ -50,7 +50,7 @@ function createMarkup(data) {
             console.log(language)
             return `<li>
         <div class="country-box">
-        <img class="country-img" src="${svg}" alt="${nameCountry} width="150" height="150" />
+        <img class="country-img" src="${svg}" alt="${nameCountry}" width="200" height="150" />
         <h2 class="country-box__title unique">${nameCountry}</h2>
         </div>
         <h2>Capital: ${capital}</h2>
