@@ -38,7 +38,7 @@ function onSearchCountry(event) {
 }
 
 function createMarkup(data) {
-    console.log("DATA",data)
+    // console.log("DATA",data)
     if (data.length === 1) {
         const markup = data.map(({
             name: { official: nameCountry },
